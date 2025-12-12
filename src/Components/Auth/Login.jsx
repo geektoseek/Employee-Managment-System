@@ -9,8 +9,6 @@ const Login = ({ handleLogin }) => {
 
         handleLogin(email, password);
 
-        console.log("Form Submited", email);
-        console.log("Form Submited", password);
 
         setemail('');
         setpassword('');

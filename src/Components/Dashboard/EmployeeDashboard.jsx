@@ -4,16 +4,13 @@ import NewTasklistNumber from '../Other/NewTasklistNumber';
 import NewTaskList from '../TaskList/NewTaskList';
 
 const EmployeeDashboard = ({ data }) => {
-
     return (
         <div className='bg-[#1c1c1c] p-10 h-screen'>
-            <h2>{data?.id}</h2>
-            <Header />
-            <NewTasklistNumber />
-            <NewTaskList />
-
+            <Header data={data} />
+            <NewTasklistNumber data={data} />
+            <NewTaskList data={data} />
         </div>
     )
 }
 
-export default EmployeeDashboard
+export default EmployeeDashboard;
