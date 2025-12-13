@@ -6,10 +6,10 @@ import AdminformCreate from '../Other/AdminformCreate'
 const AdminDashboard = ({ data }) => {
     return (
         <div className='h-screen w-screen p-10'>
-            <h1>{data.name}</h1>
-            <Header />
-            <AdminformCreate />
-            <Alltask />
+
+            <Header data={data} />
+            <AdminformCreate data={data} />
+            <Alltask data={data} />
 
         </div>
     )
