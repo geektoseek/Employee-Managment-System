@@ -7,19 +7,20 @@ import { AuthContext } from './Context/AuthProvider';
 const App = () => {
   const authData = useContext(AuthContext);
   const [loggedInUserData, setloggedInUserData] = useState(null)
-
-  // useEffect(() => {
-  //   const loggedInUser = localStorage.getItem("loggedInUser");
-  //   if (loggedInUser) {
-  //     setUser(loggedInUser.role)
-  //   }
-
-  // }, [authData])
-
-
-
-
   const [user, setUser] = useState(null);
+
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('loggedInUser')
+    if (loggedInUser) {
+      console.log("User Logged In")
+    }
+
+  })
+
+
+
+
 
 
   const handleLogin = (email, password) => {

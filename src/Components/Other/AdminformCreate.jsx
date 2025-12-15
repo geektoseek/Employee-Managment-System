@@ -3,7 +3,7 @@ import React from 'react'
 const AdminformCreate = () => {
     return (
         <div>
-            <div className='bg-gray-600 p-10 rounded-2xl border-[1px] border-white mt-10'>
+            <div className='bg-gray-600 p-10 rounded-2xl border-[1] border-white mt-10'>
                 <form className='flex items-start justify-between gap-8 '>
                     <div className='text-white w-[45%]'>
                         <div className='flex gap-3 flex-col my-2'>

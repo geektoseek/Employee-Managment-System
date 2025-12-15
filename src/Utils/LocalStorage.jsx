@@ -10,10 +10,10 @@ const employees = [
                 description: "Create the hero section and layout.",
                 date: "2025-12-12",
                 category: "Design",
-                active: true,
-                newTask: true,
+                active: false,
+                newTask: false,
                 completed: false,
-                failed: false
+                failed: true
             },
             {
                 title: "Fix Navbar Bug",
@@ -22,8 +22,8 @@ const employees = [
                 category: "Bug Fix",
                 active: false,
                 newTask: false,
-                completed: true,
-                failed: false
+                completed: false,
+                failed: true
             },
             {
                 title: "Prepare UI Kit",

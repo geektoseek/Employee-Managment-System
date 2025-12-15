@@ -4,6 +4,7 @@ import NewTasklistNumber from '../Other/NewTasklistNumber';
 import NewTaskList from '../TaskList/NewTaskList';
 
 const EmployeeDashboard = ({ data }) => {
+    console.log("Hello this is from Employee Dashboard ", data)
     return (
         <div className='bg-[#1c1c1c] p-10 h-max'>
             <Header data={data} />
