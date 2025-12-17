@@ -4,6 +4,7 @@ import EmployeeDashboard from './Components/Dashboard/EmployeeDashboard';
 import AdminDashboard from './Components/Dashboard/AdminDashboard';
 import { getLocalStorage, setLocalStorage } from './Utils/LocalStorage';
 import { AuthContext } from './Context/AuthProvider';
+import { data } from 'react-router-dom';
 const App = () => {
   const authData = useContext(AuthContext);
   const [loggedInUserData, setloggedInUserData] = useState(null)
@@ -13,10 +14,12 @@ const App = () => {
   useEffect(() => {
     const loggedInUser = localStorage.getItem('loggedInUser')
     if (loggedInUser) {
-      console.log("User Logged In")
+      const userData = JSON.parse(loggedInUser);
+      setUser(userData.role);
+      setloggedInUserData(userData.data)
     }
 
-  })
+  }, [])
 
 
 
@@ -33,7 +36,7 @@ const App = () => {
       if (employee) {
         setUser('employee')
         setloggedInUserData(employee);
-        localStorage.setItem('loggedInUser', JSON.stringify({ role: 'user' }))
+        localStorage.setItem('loggedInUser', JSON.stringify({ role: 'employee', data: employee }))
       }
     }
     else {
